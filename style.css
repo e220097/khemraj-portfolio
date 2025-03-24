@@ -1,0 +1,187 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366; /* Blue theme */
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+/* Header Styles */
+header {
+    background-color: #003366;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #FFD700; /* Yellow hover effect */
+}
+
+/* About Me Section */
+#about-me {
+    background-color: #FFD700;
+    color: #003366;
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s 0.5s forwards;
+}
+
+#about-me p {
+    font-size: 1.2em;
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px;
+    text-align: center;
+    background-color: #FF5733; /* Red theme */
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.skill {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px;
+    background-color: #8B4513; /* Brown theme */
+}
+
+.project-card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    background-color: #D3D3D3;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #4CAF50; /* Green theme */
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s 1s forwards;
+}
+
+#contact a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+footer a {
+    color: #FFD700;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FF5733; /* Red hover effect */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .skill-container {
+        grid-template-columns: 1fr;
+    }
+}
